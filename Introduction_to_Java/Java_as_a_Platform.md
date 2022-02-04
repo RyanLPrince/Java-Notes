@@ -86,5 +86,5 @@ The JRE contains everything necessary to run an **already compiled Java program*
 3) Exceutes code.
 4) Provides runtime environment. 
 
-![JVM](https://github.com/RyanLPrince/Java-Notes/blob/main/Introduciton_to_Java/Resources/Images/JVM.png)
+![JVM](https://github.com/RyanLPrince/Java-Notes/blob/main/Introduction_to_Java/Resources/Images/JVM.png)
  
