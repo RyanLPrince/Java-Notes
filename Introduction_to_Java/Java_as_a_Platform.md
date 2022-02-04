@@ -52,10 +52,39 @@
 
 HotSpot technology was introduced not long after Java’s initial release. HotSpot provides a Just-In-Time (JIT) compiler for bytecode. When a JIT compiler is part of the JVM, selected portions of bytecode are compiled into executable code in real time, on a demand basis. It is important to understand that an entire Java program is not compiled into executable code all at once. Instead, a JIT compiler compiles code as it is needed, during execution. Furthermore, not all sequences of bytecode are compiled—only those that will benefit from compilation. The remaining code is simply interpreted. However, the just-in-time approach still yields a significant performance boost. 
 
-## AoT ( Ahead of Time Compilation)
+### AoT ( Ahead of Time Compilation)
 
 Some Java environments also include an ahead-of-time compiler that can be used to compile bytecode into native code prior to execution by the JVM, rather than on-the-fly. The goal of AoT is to improve start-up times of Java applications. JIT compilers are fast but for large Java programs it can take a while for the JIT to warm up completely. Infrequently-used Java methods might never be compiled at all, potentially incurring a performance penalty due to repeated interpreted invocations. Ahead of time compilation is a specialized feature, and it does not replace Java’s traditional approach just described. Furthermore, ahead-of-time compilation has several restrictions and is as of yet, not fully rolled out.
 
+## JRE (Java Runtime Environment)
 
+* Set of software components for running a Java application.
+* JRE is made up of the JVM, Java libraries and the Java class loader.
+* Provides runtime environment to exceute bytecode, and manage program resources during execution. 
 
+![JRE](https://github.com/RyanLPrince/Java-Notes/blob/main/Introduction_to_Java/Resources/Images/JRE.png)
+
+The JRE contains everything necessary to run an **already compiled Java program**, including the Java Virtual Machine (JVM) and other infrastructure. However, it cannot be used to create new programs. The JDK contains everything the JRE has, but also the compiler (javac) and other tools required for creating and compiling new programs.
+
+## JVM (Java Virtual Machine)
+
+* The JVM is an abstract machine. 
+* The JVM is the specification for a software program that executes Java bytecode and provides the runtime environment for that code.
+* The JVM has 3 parts:
+  * **Specification**: List of detailed requirements for a JVM implementor. 
+    * JVM specification provides definitions for the: memory area, class file format, register set, garbage-collected heap, fatal error reporting etc. 
+  * **Implementation**: The implementation of the spec.
+    * Implementations of JVM are known as Java Runtime Environments (JREs).
+    * JREs for a given platform can excecute any compiled java program on the given platform.
+    * JREs can also run programs written in other languages...provided they are first compiled to Java bytecode. 
+  * **Instance/Runtime**: Whenever a Java program is excecuted, an instance of the JVM is created. 
+
+### What does the JVM do?
+
+1) Loads code.
+2) Verifies code.
+3) Exceutes code.
+4) Provides runtime environment. 
+
+![JVM](https://github.com/RyanLPrince/Java-Notes/blob/main/Introduciton_to_Java/Resources/Images/JVM.png)
  
