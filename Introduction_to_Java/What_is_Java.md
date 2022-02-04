@@ -28,7 +28,7 @@
 4) JavaFX
 * JavaFX is a set of graphics and media packages that enables developers to design, create, test, debug, and deploy rich client applications that operate consistently across diverse platforms.
 
-## Why Should we Program in Java?
+## Why Should We Program in Java?
 
 1) **Simple**<br>
 * Java is easy to learn, with a fluid English syntax based on C++ and few 'magic characters' i.e angular brackets.
