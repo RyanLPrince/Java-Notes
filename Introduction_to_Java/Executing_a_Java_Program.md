@@ -30,7 +30,7 @@ public class HelloWorld{
 ~~~
 $ javac HelloWorld.java           ⭠ The javac command compiles the HelloWorld.java source file
 $ dir
-HelloWorld.java HelloWorld.class  ⭠ After compilattion a HelloWorld.class file is produced - the corresponding Java bytecode.
+HelloWorld.java HelloWorld.class  ⭠ After compilation a HelloWorld.class file is produced - the corresponding Java bytecode.
 
 $ javac *.java                    ⭠ Compiles all the java files in the directory.
 
