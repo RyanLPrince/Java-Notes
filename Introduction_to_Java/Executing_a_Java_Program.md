@@ -1,5 +1,18 @@
 # Executing a Java Program
 
+## Java Environment Setup
+
+1) Install JDK.
+2) Set up Java path
+ 
+
+~~~
+$ java --version                                                    ⭠ Check which version of Java has been setup.
+java 9.0.4
+Java(TM) SE Runtime Environment (build 9.0.4+11)
+Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
+~~~
+
 ## Compiling and Executing Java Programs
 
 * The java file name should be the same as the class name (if public) with the `.java` extension. 
