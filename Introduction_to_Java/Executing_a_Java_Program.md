@@ -16,7 +16,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 ## Compiling and Executing Java Programs
 
 * The java file name should be the same as the class name (if public) with the `.java` extension. 
-  * Java is case-sensitive 
+  * Java is case-sensitive. 
  
 ### HelloWorld.java
 ~~~
