@@ -5,7 +5,7 @@
 * The java file name should be the same as the class name (if public) with the `.java` extension. 
   * Java is case-sensitive 
  
- ###### HelloWorld.java
+### HelloWorld.java
 ~~~
 public class HelloWorld{
   public static void main(String [] args){
@@ -25,12 +25,11 @@ $ java HelloWorld                 ⭠ Excecutes HelloWorld.class file. This comm
 Hello World!                      ⭠ Output of the program is displayed on the comman line.
 ~~~
 
-* If your java class is not public, the file name does not have to match the class name. 
-e.g. we could save the following file as RandomName.java
-
 * If your java class is not public the file name does not have to match the class name. 
-e.g. we could save the following file as RandomName.java
+e.g. we could save the following file as RandomClassName.java
 
+
+### RandomClassName.java
 ~~~
 class GoodbyeWorld{
   public static void main(String [] args){
@@ -40,11 +39,11 @@ class GoodbyeWorld{
 ~~~
 
 ~~~
-$ javac RandomName.java            ⭠ This creates a GoodByeWorld.class file, the corresponding Java byte code.
+$ javac RandomClassName.java            ⭠ This creates a GoodByeWorld.class file, the corresponding Java byte code.
 $ dir
-RandomName.java GoodbyeWorld.class 
+RandomClassName.java GoodbyeWorld.class 
 
-$ java GoodbyeWorld                ⭠ Excecutes GoodbyeWorld.class files
+$ java GoodbyeWorld                     ⭠ Excecutes GoodbyeWorld.class files
 ~~~
 
 * If we do not remove the public access modifier then we get the following error:
