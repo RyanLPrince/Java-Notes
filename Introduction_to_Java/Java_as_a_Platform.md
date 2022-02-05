@@ -52,7 +52,7 @@
 
 HotSpot technology was introduced not long after Java’s initial release. HotSpot provides a Just-In-Time (JIT) compiler for bytecode. When a JIT compiler is part of the JVM, selected portions of bytecode are compiled into executable code in real time, on a demand basis. It is important to understand that an entire Java program is not compiled into executable code all at once. Instead, a JIT compiler compiles code as it is needed, during execution. Furthermore, not all sequences of bytecode are compiled—only those that will benefit from compilation. The remaining code is simply interpreted. However, the just-in-time approach still yields a significant performance boost. 
 
-### AoT ( Ahead of Time Compilation)
+### AoT (Ahead of Time Compilation)
 
 Some Java environments also include an ahead-of-time compiler that can be used to compile bytecode into native code prior to execution by the JVM, rather than on-the-fly. The goal of AoT is to improve start-up times of Java applications. JIT compilers are fast but for large Java programs it can take a while for the JIT to warm up completely. Infrequently-used Java methods might never be compiled at all, potentially incurring a performance penalty due to repeated interpreted invocations. Ahead of time compilation is a specialized feature, and it does not replace Java’s traditional approach just described. Furthermore, ahead-of-time compilation has several restrictions and is as of yet, not fully rolled out.
 
@@ -88,3 +88,56 @@ The JRE contains everything necessary to run an **already compiled Java program*
 
 ![JVM](https://github.com/RyanLPrince/Java-Notes/blob/main/Introduction_to_Java/Resources/Images/JVM.png)
  
+1) Classloader
+* Loads class files (Java bytecode).
+* Whenever a Java program is run, it is first loaded by the classloader.
+* There are three built-in classloaders in Java. 
+  * Bootstrap ClassLoader: 
+    - Loads rt.jar file.
+      - rt.jar contains all class files of the Java SE e.g. java.lang, java.util packages (compiled java runtime libraries).
+    - Loads other core libraries located in $JAVA_HOME/jre/lib directory   
+  * Extension Classloader: 
+    - Child of Bootstrap.
+    - Loads the jar files located inside $JAVA_HOME/jre/lib/ext directory.
+      - so that these extensions of the core java libraries are available to all applications running on the platform.
+  * System/Application ClassLoader: 
+    - Child of extension classloader
+    - Loads application level classes into the JVM. 
+    - It loads files found in the classpath environment variable.
+    - Loads new classes you have written. 
+~~~
+String.class.getClassLoader()   //null because String class is part of rt.jar and hence loaded by the native Bootstrap classloader
+MyClass.class.getClassLoader()  // sun.misc.Launcher$AppClassLoader@4e0e2f2a 
+~~~
+2) Class Area
+* Class Area stores class structures such as:
+  - Runtime constants. 
+  - Field and method data.
+  - Code for methods.
+  - Stores class.
+3) Heap 
+* Runtime data area.  
+* Memory for all class instances are allocated.
+* Stores instance of a class.
+4) Stack
+* JVM creates a separate stack each time a thread is created.
+* Each method call performed by the thread and corresponding local variables will be stored in the stack.
+* For every method call a separate 'frame' will be added to the stack.
+* Frames store local variables, partial results, and plays a part in method invocation and return. 
+* After completing the method call the corresponding frame will be removed from the stack.
+* After all the method calls are complete the stack will become empty and the empty stack will be destroyed by the JVM.
+5) Program Counter Register
+* PC register contains the address of the Java virtual machine instruction currently being executed.
+6) Native Method Stack 
+* It contains all the native methods used in the application.
+* A native method is a Java method whose implementation is written in another programming language such as C. 
+  - Write faster code on a critical section with better CPU assembly instructions (not CPU portable).
+  - Make direct system calls (not OS portable).
+7) Execution Engine
+* It contains:
+  - A virtual processor.
+  - Interpreter: Read bytecode stream then execute the instructions.
+  - Just-In-Time(JIT) compiler.
+8) Java Native Interface 
+* Java Native Interface (JNI) is a framework which provides an interface to communicate with another application written in another language like C, C++, Assembly etc. 
+* Java uses JNI framework to send output to the Console or interact with OS libraries.
