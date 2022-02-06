@@ -34,4 +34,9 @@
   * A Poodle class can inherit attributes from a Dog class.  
 2) Polymorphism
 * A feature that allows one interface to be used for a general class of actions (ability of an Object to take different forms).
-3) 
+3) Abstraction
+* Focus on higher levels of programming (functionality) rather than details of parts (implementation).
+4) Encapsulation
+* Wrapping fields and methods in single well defined units.
+* Controlling access to the units. 
+
