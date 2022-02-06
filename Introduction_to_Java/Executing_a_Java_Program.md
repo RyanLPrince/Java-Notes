@@ -4,11 +4,11 @@
 
 1) Install JDK.
 2) Set up Java path
- * Windows
-  - Search for 'advanced system settings'.
-  - Select `Environment Variables...` under the `Advanced` tab.
-  - Under `System Variables` select new and create a new variable called `JAVA_HOME` (edit if JAVA_HOME already exists).
-   - Enter the `Value` as the path of the JDK, it will usually be along the lines of *C:\Program Files\Java\jdk1.8.0_60.*
+* Windows
+  * Search for 'advanced system settings'.
+  * Select `Environment Variables...` under the `Advanced` tab.
+  * Under `System Variables` select new and create a new variable called `JAVA_HOME` (edit if JAVA_HOME already exists).
+  * Enter the `Value` as the path of the JDK, it will usually be along the lines of *C:\Program Files\Java\jdk1.8.0_60.*
 
 ~~~
 $ java --version                                                    ⭠ Check which version of Java has been setup.
