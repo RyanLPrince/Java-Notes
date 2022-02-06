@@ -9,6 +9,9 @@
 3) [Java as a Platform]: https://github.com/RyanLPrince/Java-Notes/blob/main/Introduction_to_Java/Java_as_a_Platform.md "Java_as_a_Platform.md"
 [Java as a Platform] A dive into the Java platform's internals including bytecode, JDK, JRE, and JVM. 
 <br><br>
-4) [Executing a Java Program]: https://github.com/RyanLPrince/Java-Notes/blob/main/Introduction_to_Java/Executing_a_Java_Program.md "Executing_a_Java_Program.md"
+4) [Object Oriented Programming]: https://github.com/RyanLPrince/Java-Notes/blob/main/Introduction_to_Java/Object_Oriented_Programming.md "Object_Oriented_Programming.md"
+[Object Oriented Programming] An overview of the object oriented programming paradigm and the key principles of Java. 
+<br><br>
+5) [Executing a Java Program]: https://github.com/RyanLPrince/Java-Notes/blob/main/Introduction_to_Java/Executing_a_Java_Program.md "Executing_a_Java_Program.md"
 [Executing a Java Program] A quick walkthrough of the steps of executing a Java program via the command line. 
 <br><br>
