@@ -4,7 +4,11 @@
 
 1) Install JDK.
 2) Set up Java path
- TBC...
+ * Windows
+  - Search for 'advanced system settings'.
+  - Select `Environment Variables...` under the `Advanced` tab.
+  - Under `System Variables` select new and create a new variable called `JAVA_HOME` (edit if JAVA_HOME already exists).
+   - Enter the `Value` as the path of the JDK, it will usually be along the lines of *C:\Program Files\Java\jdk1.8.0_60.*
 
 ~~~
 $ java --version                                                    ⭠ Check which version of Java has been setup.
@@ -35,7 +39,7 @@ HelloWorld.java HelloWorld.class  ⭠ After compilation a HelloWorld.class file 
 $ javac *.java                    ⭠ Compiles all the java files in the directory.
 
 $ java HelloWorld                 ⭠ Excecutes HelloWorld.class file. This command is used on the class with the main method. Note that the argument does not have the .class extension.
-Hello World!                      ⭠ Output of the program is displayed on the comman line.
+Hello World!                      ⭠ Output of the program is displayed on the command line.
 ~~~
 
 * If your java class is not public the file name does not have to match the class name. 
