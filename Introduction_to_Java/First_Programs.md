@@ -148,3 +148,36 @@ public class Ticket{
   }    
 }
 ~~~
+
+* Now that a class has been made it must be instantiated so that the fields and methods of the class can be used.
+
+~~~
+public class TicketMachine{
+  public static void main (String [] args){
+    Ticket tm = new Ticket (10);
+    tm.changePrice(20);
+    System.out.println(tm.getPrice());
+  }
+}
+~~~
+
+~~~
+$ javac Ticket.java TicketMachine.java
+$ java TicketMachine.java
+
+20
+~~~
+
+~~~
+  (1)  (2)   (3)  (4) (5)
+Ticket tm = new Ticket(10);
+
+1. Declaration of the Object type.
+2. Name of the object.
+3. Instantiation by using the new key word to create an object.
+4. Initialization by calling the constructor of the object. Note if no constructor is explicity defined then an empty default constructor is created.
+5. The value 10 is passed to the constructor as an argument. 
+~~~
+
+* A user does not need to know how a class is implemented to use it.
+* The use of a class is defined by its collection of methods.
